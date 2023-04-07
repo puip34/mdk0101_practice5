@@ -1,6 +1,5 @@
 import math
 
-
 class Shape:
     def __init__(self, x, y):
         self.x = x
@@ -11,6 +10,10 @@ class Shape:
 
     def perimeter(self):
         pass
+
+    def move(self, x, y):
+        self.x = x
+        self.y = y
 
 
 class Rectangle(Shape):
@@ -36,3 +39,6 @@ class Circle(Shape):
 
     def perimeter(self):
         return 2 * math.pi * self.radius
+
+    def move(self, x, y):
+        super().move(x, y)
